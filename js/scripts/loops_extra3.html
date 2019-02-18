@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.3 ex</h1>
+  <h2>Extra task 3</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks one number from the user, then program finds out for the user, is the number prime number or not.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="extraThree()">Extra task 3</button>
+
+  </div>
+
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function extraThree() {
+        let num = Number(window.prompt("Give a number"));
+        let isPrime = true;
+        for (let i = 2, n = Math.sqrt(num); i <= n && isPrime; i++) {
+          isPrime = num % i !== 0
+        }
+        if (isPrime) {
+          alert("Prime")
+        } else {
+          alert("Not prime")
+        }
+      }
+</textarea>
+  </div>
+  <script>
+    function extraThree() {
+      let num = Number(window.prompt("Give a number"));
+      let isPrime = true;
+      for (let i = 2, n = Math.sqrt(num); i <= n && isPrime; i++) {
+        isPrime = num % i !== 0
+      }
+      if (isPrime) {
+        alert("Prime")
+      } else {
+        alert("Not prime")
+      }
+    }
+  </script>
+</body>
+
+</html>

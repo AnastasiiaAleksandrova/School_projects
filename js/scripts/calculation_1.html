@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 1.1</h1>
+  <h2>Calculate gasoline</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks the price of the gasoline and amount of money from the user. The program calculates how much gasoline the user gets with the money. Result is printed to the user.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="gasoline">
+
+      <div>
+        <lable for="price">Enter the price</lable>
+        <input type="number" min="1" name="price">
+      </div>
+
+      <div>
+        <lable for="money">Enter the amount of money</lable>
+        <input type="number" min="1" name="money">
+      </div>
+      <button type="button" onclick="gasolineFunction()">Calculate now!</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="gasResult">You are going to get ... gasoline.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+    function gasolineFunction() {
+      var price = Number(document.forms["gasoline"]["price"].value);
+      var money = Number(document.forms["gasoline"]["money"].value);
+      var result = money/price;
+      document.getElementById("gasResult").innerHTML = `You are going to get ${result} gasoline.`
+  }
+</textarea>
+  </div>
+  <script>
+    function gasolineFunction() {
+      var price = Number(document.forms["gasoline"]["price"].value);
+      var money = Number(document.forms["gasoline"]["money"].value);
+      var result = money / price;
+      document.getElementById("gasResult").innerHTML = `You are going to get ${result} gasoline.`
+    }
+  </script>
+</body>
+
+</html>

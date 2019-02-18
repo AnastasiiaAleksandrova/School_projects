@@ -1,0 +1,43 @@
+body {
+  padding-left: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  display: block;
+}
+
+div {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+input {
+  height: 1.5em;
+}
+
+input:focus {
+  outline: none;
+  border-color: Orange;
+}
+
+button {
+  padding-left: 0.5em;
+  margin-top: 1em;
+  padding: 0.5em;
+  background-color: Orange;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: DarkOrange;
+}
+
+button:focus {
+  outline: none;
+}
+
+textarea {
+  width: 70%;
+  height: 10em;
+}

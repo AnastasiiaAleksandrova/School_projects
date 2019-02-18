@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conditions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 2.4</h1>
+  <h2>Calculate salary</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks hourly salary and how many hours user worked on one day. With this information program calculates day’s salary. The salary is calculated as follows: - first 7 hours by hourly salary - next 2 hours 50% extra - rest of
+      the hours 100% extra</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="salary">
+      <div>
+        <label for="salary">Enter your hourly salary</label>
+        <input type="string" id="salary" name="salary">
+      </div>
+      <div>
+        <label for="hours">How many hours did you work?</label>
+        <input type="string" id="hours" name="hours">
+      </div>
+      <button type="button" onclick="countSalary()">Calculate</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="salaryResult">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function countSalary() {
+        let salaryH = Number(document.forms["salary"]["salary"].value);
+        let hours = Number(document.forms["salary"]["hours"].value);
+
+        let overPay1 = salaryH * 1.5;
+        let overPay2 = salaryH * 2;
+        let result;
+
+        if (hours <= 7) {
+          result = salaryH * hours;
+        } else if (hours >= 8 && hours <= 9) {
+          result = (salaryH * 7) + (overPay1 * (hours - 7));
+        } else if (hours > 9) {
+          result = (salaryH * 7) + (overPay1 * 2) + (overPay2 * (hours - 9));
+        }
+        document.getElementById("salaryResult").innerHTML = result;
+      }
+</textarea>
+  </div>
+  <script>
+    function countSalary() {
+      let salaryH = Number(document.forms["salary"]["salary"].value);
+      let hours = Number(document.forms["salary"]["hours"].value);
+
+      let overPay1 = salaryH * 1.5;
+      let overPay2 = salaryH * 2;
+      let result;
+
+      if (hours <= 7) {
+        result = salaryH * hours;
+      } else if (hours >= 8 && hours <= 9) {
+        result = (salaryH * 7) + (overPay1 * (hours - 7));
+      } else if (hours > 9) {
+        result = (salaryH * 7) + (overPay1 * 2) + (overPay2 * (hours - 9));
+      }
+      document.getElementById("salaryResult").innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>

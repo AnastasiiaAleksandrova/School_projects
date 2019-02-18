@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arrays 1</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS</h1>
+  <h2>Array 1</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make an array that has 10 numbers: var numbers = [4, -5, -2, 7, 15, -9, 0, 6, 7, 2];<br><br>
+      a. Program prints out the numbers in the array as follows:<br>
+      1. number 4<br>
+      2. number -5<br>
+      ...<br>
+      b. Program swaps third and seventh number other way around.<br>
+      c. Program calculates the sum of the numbers and prints out the result.<br>
+      d. Program calculates the average of the numbers and prints out the result.<br>
+      e. Program finds out the smallest number and prints it.<br>
+      f. Program asks one number from the user and then counts how many times that number is in the array. Program prints out the result.<br>
+      g. Program prints out all the numbers that are in the array before 0.<br>
+      h. Program counts how many numbers there are after 0 and prints out the result.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="arrayA()">Print the array (a)</button>
+    <button type="button" onclick="arrayB()">Swap 3d and 7th (b)</button>
+    <button type="button" onclick="arrayC()">Sum of numbers (c)</button>
+    <button type="button" onclick="arrayD()">Average (d)</button>
+    <button type="button" onclick="arrayE()">Smallest (e)</button>
+    <button type="button" onclick="arrayF()">Number in the array (f)</button>
+    <button type="button" onclick="arrayG()">Number before 0 (g)</button>
+    <button type="button" onclick="arrayH()">Numbers after 0 (h)</button>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="resultA">Here the array will be printed.</p>
+  <p id="resultB">Here the array after swap will be printed.</p>
+  <p id="resultC">Here the sum of all numbers in the array will be printed.</p>
+  <p id="resultD">Here average will be printed.</p>
+  <p id="resultE">Here the smallest will be printed.</p>
+  <p id="resultF">Here will be printed how many times the number is in the array.</p>
+  <p id="resultG">Here will be printed numbers before 0 in the array.</p>
+  <p id="resultH">Here will be printed how many numbers we have after 0.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      let numbers = [4, -5, -2, 7, 15, -9, 0, 6, 7, 2];
+
+      function arrayA() {
+        let result = "";
+        let i = 1;
+        numbers.forEach(number => {
+          result = result + "<br>" + `${i}. number ${number}`;
+          i++;
+        })
+        document.getElementById("resultA").innerHTML = result;
+      }
+
+      function arrayB() {
+        let temp = numbers[3];
+        numbers[3] = numbers[7];
+        numbers[7] = temp;
+        document.getElementById("resultB").innerHTML = numbers;
+      }
+
+      function arrayC() {
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+          sum += numbers[i];
+        }
+        document.getElementById("resultC").innerHTML = sum;
+        return sum;
+      }
+
+      function arrayD() {
+        let sum = arrayC();
+        document.getElementById("resultD").innerHTML = sum / numbers.length;
+      }
+
+      function arrayE() {
+        let small = numbers[0];
+        for (i = 1; i < numbers.length; i++) {
+          if (numbers[i] < small) {
+            small = numbers[i];
+          }
+        }
+        document.getElementById("resultE").innerHTML = small;
+      }
+
+      function arrayF() {
+        let num = Number(prompt("Give a number."));
+        cnt = 0;
+        for (i = 0; i < numbers.length; i++) {
+          if (numbers[i] == num) {
+            cnt++;
+          }
+        }
+        document.getElementById("resultF").innerHTML = cnt;
+      }
+
+      function arrayG() {
+        let i = 0;
+        while (numbers[i] != 0) {
+          i++;
+        }
+        let arr = numbers.slice(0, ++i);
+        document.getElementById("resultG").innerHTML = arr;
+      }
+
+      function arrayH() {
+        let i = 0;
+        while (numbers[i] != 0) {
+          i++;
+        }
+        let arr = numbers.slice(++i);
+        document.getElementById("resultH").innerHTML = arr.length;
+      }
+
+    </textarea>
+  </div>
+  <script>
+    let numbers = [4, -5, -2, 7, 15, -9, 0, 6, 7, 2];
+
+    function arrayA() {
+      let result = "";
+      let i = 1;
+      numbers.forEach(number => {
+        result = result + "<br>" + `${i}. number ${number}`;
+        i++;
+      })
+      document.getElementById("resultA").innerHTML = result;
+    }
+
+    function arrayB() {
+      let temp = numbers[3];
+      numbers[3] = numbers[7];
+      numbers[7] = temp;
+      document.getElementById("resultB").innerHTML = numbers;
+    }
+
+    function arrayC() {
+      let sum = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+      }
+      document.getElementById("resultC").innerHTML = sum;
+      return sum;
+    }
+
+    function arrayD() {
+      let sum = arrayC();
+      document.getElementById("resultD").innerHTML = sum / numbers.length;
+    }
+
+    function arrayE() {
+      let small = numbers[0];
+      for (i = 1; i < numbers.length; i++) {
+        if (numbers[i] < small) {
+          small = numbers[i];
+        }
+      }
+      document.getElementById("resultE").innerHTML = small;
+    }
+
+    function arrayF() {
+      let num = Number(prompt("Give a number."));
+      cnt = 0;
+      for (i = 0; i < numbers.length; i++) {
+        if (numbers[i] == num) {
+          cnt++;
+        }
+      }
+      document.getElementById("resultF").innerHTML = cnt;
+    }
+
+    function arrayG() {
+      let i = 0;
+      while (numbers[i] != 0) {
+        i++;
+      }
+      let arr = numbers.slice(0, ++i);
+      document.getElementById("resultG").innerHTML = arr;
+    }
+
+    function arrayH() {
+      let i = 0;
+      while (numbers[i] != 0) {
+        i++;
+      }
+      let arr = numbers.slice(++i);
+      document.getElementById("resultH").innerHTML = arr.length;
+    }
+  </script>
+
+</body>
+
+</html>

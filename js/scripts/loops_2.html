@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.2</h1>
+  <h2>Print even</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that prints all positive numbers that are smaller than 100 and even, in this order: 2 98 4 96 6 94 …</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="printEvenTo100()">Print even numbers from 1 to 100</button>
+
+  </div>
+
+  <h3>Answer</h3>
+
+  <p id="evenNumbers">Result will be here.</p>
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function printEvenTo100() {
+        let i = 0;
+        let j = 100;
+        let result = "";
+        while (i < j) {
+          i += 2;
+          j -= 2;
+          if (i == j) {
+            result = result + " " + i;
+          } else {
+            result = result + " " + i + " " + j;
+          }
+        }
+        document.getElementById("evenNumbers").innerHTML = result;
+      }
+</textarea>
+  </div>
+  <script>
+    function printEvenTo100() {
+      let i = 0;
+      let j = 100;
+      let result = "";
+      while (i < j) {
+        i += 2;
+        j -= 2;
+        if (i == j) {
+          result = result + " " + i;
+        } else {
+          result = result + " " + i + " " + j;
+        }
+      }
+      document.getElementById("evenNumbers").innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>

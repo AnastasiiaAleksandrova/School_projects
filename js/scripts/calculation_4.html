@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 1.4</h1>
+  <h2>Body mass index</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that calculates body mass index. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+
+    <form name="bodyIndex">
+
+      <div>
+        <lable for="mass">Enter body mass</lable>
+        <input type="number" name="mass">
+      </div>
+      <div>
+        <lable faor="height">Enter body height</lable>
+        <input type="number" name="height">
+      </div>
+      <button type="button" onclick="bodyMass()">Calculate!</button>
+    </form>
+
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="bodyMassResult">The result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function bodyMass() {
+        var mass = Number(document.forms["bodyIndex"]["mass"].value);
+        var height = Number(document.forms["bodyIndex"]["height"].value);
+        var result = mass / (height * height);
+        document.getElementById("bodyMassResult").innerHTML = `Your body mass index is ${result} kg/m2`
+      }
+</textarea>
+  </div>
+  <script>
+    function bodyMass() {
+      var mass = Number(document.forms["bodyIndex"]["mass"].value);
+      var height = Number(document.forms["bodyIndex"]["height"].value);
+      var result = mass / (height * height);
+      document.getElementById("bodyMassResult").innerHTML = `Your body mass index is ${result} kg/m2`
+    }
+  </script>
+</body>
+
+</html>

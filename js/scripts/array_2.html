@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Array 2</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS</h1>
+  <h2>Array 2</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that draws 7 digits for Lotto numbers. You have to make sure that same number isn’t there many times. You can use array that has 40 pieces of zeros. When you get a random number that is the index of the array and you make the
+      value inside zero to one, but if it already was one you draw a new random number. At the end you print out the indexes that has one as a value inside.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="lotto()">Play</button>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="result">Your numbers will be here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function lotto() {
+        let arr = new Array(40).fill(0);
+        let i = 0;
+        while (i < 7) {
+          let n = randomDig();
+          if (arr[n] !== 1){
+            arr[n] = 1;
+            i++;
+          }
+        }
+        let result = [];
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] == 1) {
+            result.push(i);
+          }
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+
+      function randomDig() {
+        return Math.floor(Math.random() * 41);
+      }
+</textarea>
+  </div>
+  <script>
+    function lotto() {
+      let arr = new Array(40).fill(0);
+      let i = 0;
+      while (i < 7) {
+        let n = randomDig();
+        if (arr[n] !== 1) {
+          arr[n] = 1;
+          i++;
+        }
+      }
+      let result = [];
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i] == 1) {
+          result.push(i);
+        }
+      }
+      document.getElementById("result").innerHTML = result;
+    }
+
+    function randomDig() {
+      return Math.floor(Math.random() * 41);
+    }
+  </script>
+</body>
+
+</html>

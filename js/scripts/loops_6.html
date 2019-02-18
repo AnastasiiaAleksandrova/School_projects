@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.6</h1>
+  <h2>Print average</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks 25 numbers form the user. In the end program prints out average of the numbers.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="showAvr()">Show average</button>
+
+  </div>
+
+
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function showAvr() {
+        let sum = 0;
+        const n = 25;
+        for (let i = 0; i < n; i++) {
+          let num = Number(window.prompt("Enter a number"));
+          sum += num;
+        }
+        alert(sum / n);
+      }
+</textarea>
+  </div>
+  <script>
+    function showAvr() {
+      let sum = 0;
+      const n = 25;
+      for (let i = 0; i < n; i++) {
+        let num = Number(window.prompt("Enter a number"));
+        sum += num;
+      }
+      alert(sum / n);
+    }
+  </script>
+</body>
+
+</html>

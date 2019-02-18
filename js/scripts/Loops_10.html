@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.10</h1>
+  <h2>Calculations</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks ten numbers. Program calculates and prints out sum and average, also prints out the smallest and biggest number.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="taskTen()">Calculate</button>
+
+  </div>
+
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function taskTen() {
+        let sum = 0;
+        let aver = 0;
+        let max1 = null;
+        let max2 = null;
+        for (i = 0; i < 10; i++) {
+          let num = Number(window.prompt("Give a number"));
+          if (max1 == null || num > max1) {
+            max2 = max1;
+            max1 = num;
+          } else if (max2 == null || num > max2) {
+            max2 = num;
+          }
+          sum += num;
+        }
+        alert(`Sum is ${sum}. Average is ${sum/i}. The biggest numbers are ${max1} and ${max2}`);
+      }
+</textarea>
+  </div>
+  <script>
+    function taskTen() {
+      let sum = 0;
+      let aver = 0;
+      let max1 = null;
+      let max2 = null;
+      for (i = 0; i < 10; i++) {
+        let num = Number(window.prompt("Give a number"));
+        if (max1 == null || num > max1) {
+          max2 = max1;
+          max1 = num;
+        } else if (max2 == null || num > max2) {
+          max2 = num;
+        }
+        sum += num;
+      }
+      alert(`Sum is ${sum}. Average is ${sum/i}. The biggest numbers are ${max1} and ${max2}`);
+    }
+  </script>
+</body>
+
+</html>

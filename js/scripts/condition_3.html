@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conditions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 2.3</h1>
+  <h2>Test numbers</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks one number from the user. Then the program finds out if the number is positive and is the number divisible by 2.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="test">
+      <div>
+        <label for="user-number">Enter you number</label>
+        <input type="string" id="user-number" name="user-number">
+      </div>
+
+      <button type="button" onclick="testNumber()">Test it!</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="testResult">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function testNumber() {
+        let userNumber = Number(document.forms["test"]["user-number"].value);
+        let testResult;
+        if (userNumber >= 0) {
+          testResult = "The number is positive";
+        } else {
+          testResult = "The number is negative";
+        }
+        if (userNumber % 2 === 0) {
+          testResult = testResult + " and divisible by 2";
+        } else {
+          testResult = testResult + " and not divisible by 2";
+        }
+        document.getElementById("testResult").innerHTML = testResult;
+      }
+</textarea>
+  </div>
+  <script>
+    function testNumber() {
+      let userNumber = Number(document.forms["test"]["user-number"].value);
+      let testResult;
+      if (userNumber >= 0) {
+        testResult = "The number is positive";
+      } else {
+        testResult = "The number is negative";
+      }
+      if (userNumber % 2 === 0) {
+        testResult = testResult + " and divisible by 2";
+      } else {
+        testResult = testResult + " and not divisible by 2";
+      }
+      document.getElementById("testResult").innerHTML = testResult;
+    }
+  </script>
+</body>
+
+</html>

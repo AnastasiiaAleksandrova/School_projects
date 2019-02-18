@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header img {
+  width: 10vw;
+  margin: 0 auto;
+  padding-left: 42vw;
+}
+
+header nav {
+  text-align: center;
+  padding: 1em 0 1em 0;
+  background-color: Black;
+}
+
+header nav a {
+  text-decoration: none;
+  color: White;
+  font-size: 1em;
+  padding: 0.5em 1em;
+}
+
+header nav a:hover {
+  color: DarkOrange;
+  background-color: rgb(70, 70, 70);
+}
+
+header nav a:focus {
+  color: DarkOrange;
+  background-color: rgb(70, 70, 70);
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 0.3em);
+}
+
+main i {
+  padding-left: 9em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+h2 {
+  margin: 1em 0;
+}
+
+h3 {
+  margin: 1em 0;
+}
+
+nav ul ul {
+  display: none;
+}
+
+.sidemenu {
+  flex: 1;
+  background-color: black;
+  min-height: 200%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.7em;
+}
+
+.sidemenu a {
+  display: block;
+  padding: 1em;
+}
+
+.content {
+  width: 9.3em;
+  background-color: rgb(10, 10, 10);
+  margin: 0.3em 0.3em 0.3em -1.5em;
+}
+
+.content a:focus {
+  background-color: rgb(70, 70, 70);
+  border-left: 0.1em solid DarkOrange;
+}
+
+.content a:hover {
+  background-color: rgb(70, 70, 70);
+  border-left: 0.1em solid DarkOrange;
+}
+
+.dropdown-btn:hover {
+  background-color: rgb(70, 70, 70);
+}
+
+.dropdown-btn {
+  width: 10em;
+  background-color: rgb(10, 10, 10);
+  margin: 0.3em;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  flex: 4;
+}
+
+iframe {
+  width: 70vw;
+  height: 40vw;
+  border-width: 0;
+}
+
+footer {
+  color: white;
+  width: 100%;
+  background-color: Black;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.copyright {
+  padding: 1em;
+}

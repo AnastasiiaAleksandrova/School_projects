@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 1.2</h1>
+  <h2>Calculate speed</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that calculates and prints out the average speed. Ask from the user distance and the time that was used. With those values program calculates the average speed and prints it to the user.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="speed">
+      <div>
+        <lable for="distance">Enter the distance</lable>
+        <input type="number" min="1" name="distance" id="distance">
+      </div>
+
+      <div>
+        <lable for="time">How long did it take</lable>
+        <input type="number" min="1" name="time" id="time">
+      </div>
+      <button type="button" onclick="speedFunction()">Calculate now!</button>
+    </form>
+  </div>
+
+  <h3>Answer</h3>
+  <p id="speedResult">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function speedFunction() {
+        var distance = Number(document.forms["speed"]["distance"].value);
+        var time = Number(document.forms["speed"]["time"].value);
+        var result = distance/time;
+        document.getElementById("speedResult").innerHTML = `Your speed was ${result} km/h`
+      }
+    </textarea>
+  </div>
+  <script>
+    function speedFunction() {
+      var distance = Number(document.forms["speed"]["distance"].value);
+      var time = Number(document.forms["speed"]["time"].value);
+      var result = distance / time;
+      document.getElementById("speedResult").innerHTML = `Your speed was ${result} km/h`
+    }
+  </script>
+</body>
+
+</html>

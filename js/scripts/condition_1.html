@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conditions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 2.1</h1>
+  <h2>Calculate army age</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks age of the user. If the age is less than 18 the text “too young” is printed. If the age is less than 27 the text “Right age for military service” is printed. If the age is less than 41 the text “You are in reserve” is
+      printed. If the age is less than 55 the text “You are in backup reserve” is printed. All other cases “too aged” is printed.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="age">
+      <div>
+        <label for="age">Enter your age</label>
+        <input type="string" id="age" name="age">
+      </div>
+      <button type="button" onclick="militaryCalculator()">So what?</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="result">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function militaryCalculator() {
+        let age = Number(document.forms["age"]["age"].value);
+        if (age < 18) {
+          document.getElementById("result").innerHTML = "You are too young";
+        } else if (age < 27) {
+          document.getElementById("result").innerHTML = "Right age for military service";
+        } else if (age < 41) {
+          document.getElementById("result").innerHTML = "You are in reserve";
+        } else if (age < 55) {
+          document.getElementById("result").innerHTML = "You are in backup reserve";
+        } else {
+          document.getElementById("result").innerHTML = "Too aged";
+        }
+      }
+</textarea>
+  </div>
+  <script>
+    function militaryCalculator() {
+      let age = Number(document.forms["age"]["age"].value);
+      if (age < 18) {
+        document.getElementById("result").innerHTML = "You are too young";
+      } else if (age < 27) {
+        document.getElementById("result").innerHTML = "Right age for military service";
+      } else if (age < 41) {
+        document.getElementById("result").innerHTML = "You are in reserve";
+      } else if (age < 55) {
+        document.getElementById("result").innerHTML = "You are in backup reserve";
+      } else {
+        document.getElementById("result").innerHTML = "Too aged";
+      }
+    }
+  </script>
+</body>
+
+</html>

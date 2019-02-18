@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  padding: 20px 10%;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 100%;
+  width: 200px;
+}
+
+nav {
+  flex: 3;
+  text-align: right;
+  margin-top: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px 10px;
+  width: 130px;
+  text-align: center;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.icon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: none;
+}
+
+nav ul li:hover {
+  background-color: #e6e6e6;
+  border-bottom: 1px solid orange;
+}
+
+main {
+  min-height: calc(100vh - 624px);
+  border-top: 1px solid #f4f4f4;
+}
+
+main h2 {
+  display: block;
+  padding: 30px;
+}
+
+#container {
+  display: flex;
+  padding: 100px;
+}
+
+main div {
+  margin: 10px auto 90px;
+}
+
+main li {
+  display: inline-block;
+  width: 150px;
+  height: 60px;
+  border: 1px solid LightGrey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 20px;
+  box-shadow: 5px 5px LightGrey;
+  align-items: center;
+}
+
+main a {
+  text-decoration: none;
+  color: black;
+}
+
+main a:hover {
+  color: white
+}
+
+main i {
+  padding-left: 60px;
+}
+
+li div {
+  text-align: center;
+}
+
+section {
+  min-height: 80vh;
+}
+
+section::before {
+  position: absolute;
+  margin-top: -80px;
+  content: '';
+  border-style: solid;
+  border-width: 0 0 5rem 100vw;
+}
+
+.edu:before {
+  border-color: transparent LightBlue LightBlue transparent;
+}
+
+.work:before {
+  border-color: transparent LightPink LightPink transparent;
+}
+
+.dev-skills:before {
+  border-color: transparent Grey Grey transparent;
+}
+.pers-skills:before {
+  border-color: transparent LightGreen LightGreen transparent;
+}
+
+.lang:before {
+  border-color: transparent Orange Orange transparent;
+}
+
+.hobbies:before {
+  border-color: transparent LightBlue LightBlue transparent;
+}
+
+.edu {
+  background-color: LightBlue;
+}
+
+.work {
+  background-color: LightPink;
+}
+
+.dev-skills {
+  background-color: Grey;
+}
+
+.pers-skills {
+  background: LightGreen;
+}
+
+.lang {
+  background-color: Orange;
+}
+
+.hobbies {
+  background-color: LightBlue;
+}
+
+.mediacontent {
+  margin-right: 40px;
+}
+
+.mediacontent img {
+  max-width: 300px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+footer {
+  background-color: #14203e;
+  display: flex;
+  padding: 40px 10%;
+}
+
+.footerlinks {
+  flex: 1;
+}
+
+.footerlinks ul {
+  padding: 0;
+}
+
+.footerlinks ul li {
+  display: block;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.footerlinks a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+footer form {
+  flex: 1;
+  margin-top: 20px;
+}
+
+.footerform {
+  display: flex;
+}
+
+footer h3 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer label {
+  color: white;
+  width: 200px;
+  margin: 10px;
+}
+
+footer input {
+  display: block;
+  margin: 10px;
+}
+
+button {
+  background-color: orange;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #fff
+}
+
+button:hover {
+  background-color: darkorange;
+  color: #333;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 1em;
+  bottom: 1.4em;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 0.625em;
+  }
+
+  .logo img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
+
+  .topnav li {
+    display: none;
+  }
+
+  .topnav.responsive li {
+    display: block;
+  }
+
+  .topnav .icon {
+    display: block;
+  }
+
+  nav {
+    text-align: center;
+    margin: auto;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    width: 85vw;
+  }
+
+  #container {
+    flex-direction: column;
+    padding: 0;
+    margin: 1.250em 0.625em;
+  }
+
+  .mediacontent {
+    margin: 30px auto;
+  }
+
+  .mediacontent img {
+    max-height: 20em;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 1.250em 0.625em;
+  }
+
+  .footerlinks {
+    display: none;
+  }
+
+  .footerform {
+    flex-direction: column;
+  }
+
+  footer label {
+    margin: 0;
+  }
+
+  footer input {
+    margin: 0 0 1.250em 0;
+    padding: 0.625em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  #container {
+    padding: 30px 40px;
+    margin: 0;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .mediacontent {
+    flex: 1;
+    margin-right: 0;
+  }
+
+  .textcontent {
+    flex: 1;
+  }
+
+  footer {
+    padding: 30px 40px;
+  }
+
+  .footerform {
+    flex-direction: column;
+  }
+
+  footer label, footer input {
+    margin: 0;
+  }
+
+  footer input {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+}

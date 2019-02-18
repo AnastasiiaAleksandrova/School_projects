@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.3</h1>
+  <h2>Calculate speed</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks repeatedly from the user the distance (km) and time (h) and calculates average speed. The program ends when user gives 0 for the distance. (After getting 0, the program does not ask anything from the user.)</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="calcSpeed()">Get speed</button>
+
+  </div>
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function calcSpeed() {
+        let dist = Number(window.prompt("Enter distance"));
+        if (dist != 0) {
+          do {
+            let time = Number(window.prompt("Enter time"));
+            alert(dist / time);
+            dist = Number(window.prompt("Enter distance"));
+          } while (dist != 0);
+        }
+      }
+</textarea>
+  </div>
+  <script>
+    function calcSpeed() {
+      let dist = Number(window.prompt("Enter distance"));
+      if (dist != 0) {
+        do {
+          let time = Number(window.prompt("Enter time"));
+          alert(dist / time);
+          dist = Number(window.prompt("Enter distance"));
+        } while (dist != 0);
+      }
+    }
+  </script>
+</body>
+
+</html>

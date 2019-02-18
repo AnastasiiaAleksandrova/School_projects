@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Conditions</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 2.2</h1>
+  <h2>Calculate numbers</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks three numbers from the user. Program prints out sum of the numbers, if any of the numbers is positive. If all the numbers are positive, also print out multiplication. If all numbers are negative, text “only negatives”
+      is printed. Handle zero as positive in this assignment.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="numbers">
+      <div>
+        <label for="number1">Enter the first number</label>
+        <input type="string" id="number1" name="number1">
+      </div>
+
+      <div>
+        <label for="number2">Enter the second number</label>
+        <input type="string" id="number2" name="number2">
+      </div>
+      <div>
+        <label for="number3">Enter the third number</label>
+        <input type="string" id="number3" name="number3">
+      </div>
+      <button type="button" onclick="countNumbers()">Do something</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="calcResult">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function countNumbers() {
+        let first = Number(document.forms["numbers"]["number1"].value);
+        let second = Number(document.forms["numbers"]["number2"].value);
+        let third = Number(document.forms["numbers"]["number3"].value);
+        let result;
+        if (first >= 0 || second >= 0 || third >= 0) {
+          result = `The sum is ${first + second + third}. `;
+          if (first >= 0 && second >= 0 && third >= 0) {
+            result = result + `The multiplication result is ${first * second * third}.`;
+          }
+        } else {
+          result = "Only negatives!"
+        }
+        document.getElementById("calcResult").innerHTML = result;
+      }
+</textarea>
+  </div>
+  <script>
+    function countNumbers() {
+      let first = Number(document.forms["numbers"]["number1"].value);
+      let second = Number(document.forms["numbers"]["number2"].value);
+      let third = Number(document.forms["numbers"]["number3"].value);
+      let result;
+      if (first >= 0 || second >= 0 || third >= 0) {
+        result = `The sum is ${first + second + third}. `;
+        if (first >= 0 && second >= 0 && third >= 0) {
+          result = result + `The multiplication result is ${first * second * third}.`;
+        }
+      } else {
+        result = "Only negatives!"
+      }
+      document.getElementById("calcResult").innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>

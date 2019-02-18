@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.8</h1>
+  <h2>Smallest number</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks first how many numbers user wants to give to the program. After that program asks those numbers. In the end program prints out the smallest number that user gave.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="taskEight()">Smallest number</button>
+
+  </div>
+
+
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function taskEight() {
+        let cnt = Number(window.prompt("How many numbers you want to give?"));
+
+        if (cnt > 0) {
+          let min = null;
+          for (let i = 0; i < cnt; i++) {
+            let num = Number(window.prompt(`Enter number (${i + 1}/${cnt})`));
+
+            if (min == null || num < min) {
+              min = num;
+            }
+          }
+          alert(min);
+        }
+      }
+</textarea>
+  </div>
+  <script>
+    function taskEight() {
+      let cnt = Number(window.prompt("How many numbers you want to give?"));
+
+      if (cnt > 0) {
+        let min = null;
+        for (let i = 0; i < cnt; i++) {
+          let num = Number(window.prompt(`Enter number (${i + 1}/${cnt})`));
+
+          if (min == null || num < min) {
+            min = num;
+          }
+        }
+        alert(min);
+      }
+    }
+  </script>
+</body>
+
+</html>

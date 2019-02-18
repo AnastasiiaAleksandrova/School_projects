@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculation</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 1.3</h1>
+  <h2>Inches to centimeters</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that transforms inches to centimeter. 1 inch = 2.54 cm The answer should be in this form:”x incs is y centimeter.”</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <form name="inches">
+
+      <div>
+        <lable for="inches">Enter inches here</lable>
+        <input type="number" name="inches">
+      </div>
+
+      <button type="button" onclick="inchesFunction()">Transform!</button>
+    </form>
+
+  </div>
+
+  <h3>Answer</h3>
+  <p id="transformationResult">Result will be printed here.</p>
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function inchesFunction() {
+        var inches = Number(document.forms["inches"]["inches"].value);
+        var result = inches * 2.54;
+        if (inches === 1) {
+          document.getElementById("transformationResult").innerHTML = `${inches} inch is ${result} centimeters.`
+        } else {document.getElementById("transformationResult").innerHTML = `${inches} inches is ${result} centimeters.`
+        }
+      }
+</textarea>
+  </div>
+  <script>
+    function inchesFunction() {
+      var inches = Number(document.forms["inches"]["inches"].value);
+      var result = inches * 2.54;
+      if (inches === 1) {
+        document.getElementById("transformationResult").innerHTML = `${inches} inch is ${result} centimeters.`
+      } else {
+        document.getElementById("transformationResult").innerHTML = `${inches} inches is ${result} centimeters.`
+      }
+    }
+  </script>
+</body>
+
+</html>

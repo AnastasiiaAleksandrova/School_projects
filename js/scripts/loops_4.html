@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.4</h1>
+  <h2>Find even</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks 20 numbers from user. After that the program prints out how many of those numbers where even.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="findEven()">Find even</button>
+
+  </div>
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function findEven() {
+        let result = 0;
+        for (let i = 0; i < 20; i++) {
+          let num = Number(window.prompt("Enter a number"));
+          if (num % 2 == 0) {
+            result++;
+          }
+        }
+        alert(result);
+      }
+</textarea>
+  </div>
+  <script>
+    function findEven() {
+      let result = 0;
+      for (let i = 0; i < 20; i++) {
+        let num = Number(window.prompt("Enter a number"));
+        if (num % 2 == 0) {
+          result++;
+        }
+      }
+      alert(result);
+    }
+  </script>
+</body>
+
+</html>

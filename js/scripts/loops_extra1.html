@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loops</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>JS 3.1 ex</h1>
+  <h2>Extra task</h2>
+  <div class="task">
+    <h3>Description</h3>
+    <p>Make a program that asks one integer and prints all numbers that are greater than 1 and the given number is divisible with.</p>
+  </div>
+  <div class="solution">
+    <h3>Solution</h3>
+    <button type="button" onclick="extraOne()">Extra task 1</button>
+
+  </div>
+
+
+
+
+
+  <div class="code">
+    <h3>Code example</h3>
+    <textarea readonly>
+      function extraOne() {
+        let result = "";
+        let num = Number(window.prompt("Give a number"));
+        for (i = 2; i <= num; i++) {
+          if (num % i == 0) {
+            result = result + " " + i;
+          }
+        }
+        alert(`Resut is ${result}`);
+      }
+</textarea>
+  </div>
+  <script>
+    function extraOne() {
+      let result = "";
+      let num = Number(window.prompt("Give a number"));
+      for (i = 2; i <= num; i++) {
+        if (num % i == 0) {
+          result = result + " " + i;
+        }
+      }
+      alert(`Resut is ${result}`);
+    }
+  </script>
+</body>
+
+</html>

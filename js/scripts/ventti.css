@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+h2 {
+  color: Grey;
+}
+
+#new {
+  margin: 1em 0 1em 45em;
+  font-weight: bold;
+  height: 3em;
+  width: 15em;
+  border-radius: 1em;
+  border-width: 0;
+  background-color: Black;
+  color: white;
+}
+
+#new:hover {}
+
+#new:focus {
+  border-width: 0;
+}
+
+#table {
+  display: flex;
+  margin: 0 10em;
+}
+
+#user {
+  flex: 1;
+  padding: 1em;
+  margin: 1em;
+  border: LightGrey solid 0.1em;
+  border-radius: 1em;
+  background-color: LightGrey;
+}
+
+#host {
+  min-height: 10em;
+  flex: 1;
+  padding: 1em;
+  margin: 1em;
+  border: LightGrey solid 0.1em;
+  border-radius: 1em;
+  background-color: LightGrey;
+}
+
+#user_hand {
+  min-height: 10em;
+  padding: 1em 1em 1em 0;
+}
+
+#host_hand {
+  min-height: 10em;
+  padding: 1em 1em 1em 0;
+}
+
+#take {
+  height: 2em;
+  width: 10em;
+  font-weight: bold;
+  background-color: Green;
+  color: White;
+  border-width: 0;
+  border-radius: 1em;
+  margin-left: 5em;
+}
+
+#stop {
+  height: 2em;
+  width: 10em;
+  font-weight: bold;
+  background-color: Red;
+  color: White;
+  border-width: 0;
+  border-radius: 1em;
+  margin-left: 5em;
+}
+
+#take:hover {}
+
+#stop:hover {}
+
+#winner {
+  font-size: 1em;
+  margin: 0 auto;
+}

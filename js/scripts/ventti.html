@@ -11,20 +11,22 @@
   <header>
     <button type="button" id="new" onclick="onNewGameCallback()">START NEW GAME</button>
   </header>
-  <div id=table>
-    <div id="user">
-      <h2>My hand</h2>
-      <div id="user_hand"></div>
-      <button type=button id="take" onclick="onNextMoveCallback()">Take card</button>
-      <button type="button" id="stop" onclick="onStopGameCallback()">I don't need more</button>
-    </div>
-    <div id="host">
-      <h2>Host hand</h2>
-      <div id="host_hand"></div>
+  <div id="main">
+    <div id="table">
+      <div id="user">
+        <h2>My hand</h2>
+        <div id="user_hand"></div>
+        <button type="button" id="take" onclick="onNextMoveCallback()">Take card</button>
+        <button type="button" id="stop" onclick="onStopGameCallback()">I don't need more</button>
+      </div>
+      <div id="host">
+        <h2>Host hand</h2>
+        <div id="host_hand"></div>
 
+      </div>
     </div>
+    <div id="winner"></div>
   </div>
-  <div id="winner"></div>
 
 
 
@@ -34,6 +36,8 @@
 
     function onNewGameCallback() {
       game = new Ventti();
+      document.getElementById("take").disabled = false;
+      document.getElementById("stop").disabled = false;
       updateUI();
 
       document.getElementById("winner").innerHTML = "";
@@ -52,20 +56,43 @@
     function onStopGameCallback() {
       while (game.playHost()) {}
       updateUI();
+      document.getElementById("take").disabled = true;
+      document.getElementById("stop").disabled = true;
 
       let winner;
       switch (game.getWinner()) {
         case 1:
-          winner = "User wins";
+          winner = "User wins!";
           break;
         case 0:
-          winner = "Tie";
+          winner = "Tie!";
           break
         case -1:
-          winner = "Host wins";
+          winner = "Host wins!";
           break;
       }
+
       document.getElementById("winner").innerHTML = winner;
+      animation();
+    }
+
+
+
+    function animation() {
+      let elem = document.getElementById("winner");
+      let posTop = 0;
+      let posLeft = 19;
+      let id = setInterval(frame, 50);
+
+      function frame() {
+        if (posTop == 13) {
+          clearInterval(id);
+        } else {
+          posTop++;
+          elem.style.top = posTop + "em";
+          elem.style.left = posLeft + "em";
+        }
+      }
     }
 
     function updateUI() {
@@ -102,24 +129,22 @@
       console.log(suit)
       switch (suit) {
         case 1:
-          html += '&diams;';
+          html += 'D';
           break;
         case 2:
-          html += "&hearts;";
+          html += "H";
           break;
         case 3:
-          html += '&spades;';
+          html += 'S';
           break;
         case 4:
-          html += '&clubs;';
+          html += 'C';
           break;
       }
 
-      if (suit == 1 || suit == 2) {
-        html = "<font color=\"red\">" + html + "</font>"
-      } else {
-        html = "<font color=\"black\">" + html + "</font>"
-      }
+
+      html = "<img src=\"img/" + html + ".png\" style=\"width:5em; height=auto\">"
+
 
       return html;
     }

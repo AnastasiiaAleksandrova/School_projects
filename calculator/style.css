@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+table {
+  border: solid 0.1em orange;
+  background-color: Black;
+  border-radius: 0.5em;
+  border-spacing: 1em;
+  border-collapse: separate;
+  padding: 0.5em;
+}
+
+input {
+  border-width: 0;
+  background-color: inherit;
+  color: white;
+  border-radius: 50%;
+  background-color: #333;
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:active {
+  border: solid #777 0.1em;
+}
+
+.left {
+  background-color: orange;
+}
+
+.c {
+  background-color: #777;
+}
+
+#result {
+  color: black;
+  height: 3em;
+  width: 17em;
+  background-color: white;
+  border-radius: 0.5em;
+  border-width: 0;
+  margin: 2em 0;
+}

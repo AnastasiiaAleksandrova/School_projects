@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <table>
+    <form name="calculator">
+      <tr>
+        <td colspan="4"><input type="text" id="result" value=""></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="1" id="one" onclick="calculator.result.value += ' 1'"></td>
+        <td><input type="button" value="2" id="two" onclick="calculator.result.value += ' 2'"></td>
+        <td><input type="button" value="3" id="three" onclick="calculator.result.value += ' 3'"></td>
+        <td><input class="left" type="button" value="+" id="plus" onclick="calculator.result.value += ' +'"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" id="four" onclick="calculator.result.value += ' 4'"></td>
+        <td><input type="button" value="5" id="five" onclick="calculator.result.value += ' 5'"></td>
+        <td><input type="button" value="6" id="six" onclick="calculator.result.value += ' 6'"></td>
+        <td><input class="left" type="button" value="-" id="minus" onclick="calculator.result.value += ' -'"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" id="seven" onclick="calculator.result.value += ' 7'"></td>
+        <td><input type="button" value="8" id="eight" onclick="calculator.result.value += ' 8'"></td>
+        <td><input type="button" value="9" id="nine" onclick="calculator.result.value += ' 9'"></td>
+        <td><input class="left" type="button" value="*" id="mult" onclick="calculator.result.value += ' *'"></td>
+      </tr>
+      <tr>
+        <td><input class="c" type="button" value="c" id="clear" onclick="calculator.result.value = ''"></td>
+        <td><input type="button" value="0" id="zero" onclick="calculator.result.value += ' 0'"></td>
+        <td><input type="button" value="=" id="eq" onclick="calculator.result.value = eval(calculator.result.value)"></td>
+        <td><input class="left" type="button" value="/" id="div" onclick="calculator.result.value += ' /'"></td>
+      </tr>
+    </form>
+  </table>
+</body>
+
+</html>

@@ -3,8 +3,8 @@
 
 <head>
   <title>Ventti</title>
-  <script src="ventti.js"></script>
-  <link rel="stylesheet" type="text/css" href="ventti.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -12,21 +12,28 @@
     <button type="button" id="new" onclick="onNewGameCallback()">START NEW GAME</button>
   </header>
   <div id="main">
-    <div id="table">
-      <div id="user">
-        <h2>My hand</h2>
-        <div id="user_hand"></div>
-        <button type="button" id="take" onclick="onNextMoveCallback()">Take card</button>
-        <button type="button" id="stop" onclick="onStopGameCallback()">I don't need more</button>
-      </div>
-      <div id="host">
-        <h2>Host hand</h2>
-        <div id="host_hand"></div>
 
-      </div>
+    <div id="user">
+      <h2>My hand</h2>
+      <div id="user_hand"></div>
     </div>
-    <div id="winner"></div>
+
+    <div id="host">
+      <h2>Host hand</h2>
+      <div id="host_hand"></div>
+    </div>
+
+    <div id="set">
+      <img src="img/gray_back.png">
+    </div>
+
   </div>
+  <div id="buttons">
+    <button type="button" id="take" onclick="onNextMoveCallback()">TAKE A CARD</button>
+    <button type="button" id="stop" onclick="onStopGameCallback()">I DON'T NEED MORE</button>
+  </div>
+  <div id="winner"></div>
+
 
 
 
@@ -81,11 +88,11 @@
     function animation() {
       let elem = document.getElementById("winner");
       let posTop = 0;
-      let posLeft = 19;
+      let posLeft = 17;
       let id = setInterval(frame, 50);
 
       function frame() {
-        if (posTop == 13) {
+        if (posTop == 8) {
           clearInterval(id);
         } else {
           posTop++;

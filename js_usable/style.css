@@ -14,7 +14,7 @@ header img {
 
 header nav {
   text-align: center;
-  padding: 1em 0 1em 0;
+  padding: 0.5em 0;
   background-color: Black;
 }
 
@@ -23,18 +23,44 @@ header nav a {
   color: White;
   font-size: 1em;
   padding: 0.5em 1em;
+  position: relative;
 }
 
-header nav a:hover {
-  color: DarkOrange;
+nav li {
+  padding: 0.5em 0;
+}
+
+header nav a::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background-color: orange;
+  margin-top: 2.2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .3s all;
+}
+
+nav li:hover a::after {
+  width: 100%;
+}
+
+nav li:hover {
   background-color: rgb(70, 70, 70);
 }
 
-header nav a:focus {
+.active {
   color: DarkOrange;
   background-color: rgb(70, 70, 70);
+  border-bottom: solid orange 1px;
 }
 
+/* header nav a:focus {
+  color: DarkOrange;
+  background-color: rgb(70, 70, 70);
+} */
 main {
   display: flex;
   height: calc(100vh - 0.3em);
@@ -74,7 +100,7 @@ a {
 
 .sidemenu a {
   display: block;
-  padding: 1em;
+  padding: 1em 1em;
 }
 
 .content {
@@ -107,14 +133,119 @@ ul {
   list-style: none;
 }
 
+ul li {
+  display: inline-block;
+}
+
+.sidemenu li {
+  padding: 0;
+}
+
 .container {
   flex: 4;
 }
 
 iframe {
-  width: 70vw;
-  height: 40vw;
+  width: 80vw;
+  height: 100vw;
   border-width: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  margin: 2em 2em;
+}
+
+.card {
+  width: 15em;
+  height: 10em;
+  perspective: 1000px;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .inner {
+  box-shadow: 0 0.2em 0.2em 0 LightGrey;
+  transform: rotate3d(0, 180, 0, 180deg);
+  transition-duration: 1s;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 0.1em solid Grey;
+  border-radius: 0.5em;
+}
+
+.back {
+  background-color: orange;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 2em;
+  text-align: center;
+}
+
+.back p {
+  margin: 1em;
+}
+
+.circle {
+  width: 3em;
+  height: 3em;
+  background-color: LightGrey;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 1em;
+  color: Black;
+  font-weight: bold;
+}
+
+.number {
+  width: 0.7em;
+  height: 1em;
+  margin: auto;
+  padding-top: 1em;
+}
+
+.text {
+  width: 3em;
+  height: 1em;
+  color: black;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.number.wide {
+  width: 2em;
+}
+
+.text.wide {
+  width: 5em;
+}
+
+.text.medium {
+  width: 4em;
+}
+
+.number.medium {
+  width: 1em;
+}
+
+.crd:hover .circle {
+  background-color: orange;
 }
 
 footer {

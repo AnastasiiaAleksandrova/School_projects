@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header>
+    <div id="logo"><img src="img/logo.png" alt="logo"></div>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#">About me</a>
+        </li>
+
+        <li>
+          <a href="index.html">JS practice</a>
+        </li>
+        <li>
+          <a class="active" href="#">HTML practice</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="sidemenu">
+      <nav>
+        <ul>
+          <li class="content"><a href="/calculator/index.html" target="iframe_a">CALCULATOR</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+    <div class="container">
+      <iframe name="iframe_a"></iframe>
+
+    </div>
+  </main>
+
+
+
+
+  <footer>
+    <div class="copyright"><i class="far fa-copyright"></i> Copyright</div>
+  </footer>
+
+  <script>
+    let dropdown = document.getElementsByClassName("dropdown-btn");
+    let icon = document.getElementsByClassName("fas");
+    for (let i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        let dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          icon[i].className = "fas fa-plus";
+        } else {
+          dropdownContent.style.display = "block";
+          icon[i].className = "fas fa-minus";
+
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

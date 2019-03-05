@@ -23,9 +23,6 @@
       <div id="host_hand"></div>
     </div>
 
-    <div id="set">
-      <img src="img/gray_back.png">
-    </div>
 
   </div>
   <div id="buttons">
@@ -80,19 +77,19 @@
       }
 
       document.getElementById("winner").innerHTML = winner;
-      animation();
+      animationWinner();
     }
 
 
 
-    function animation() {
+    function animationWinner() {
       let elem = document.getElementById("winner");
       let posTop = 0;
-      let posLeft = 17;
+      let posLeft = 19;
       let id = setInterval(frame, 50);
 
       function frame() {
-        if (posTop == 8) {
+        if (posTop == 7) {
           clearInterval(id);
         } else {
           posTop++;
@@ -108,7 +105,6 @@
 
       document.getElementById("host_hand").innerHTML = game.getHostHand()
         .map(card => getCardHtml(card)).reduce((acc, val) => acc + " " + val, "");
-
     }
 
     function getCardHtml(card) {
@@ -133,7 +129,7 @@
       } else {
         html += type;
       }
-      console.log(suit)
+      //console.log(suit)
       switch (suit) {
         case 1:
           html += 'D';

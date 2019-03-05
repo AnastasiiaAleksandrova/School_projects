@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+.piano {
+  position: relative;
+}
+
+div {
+  display: inline-block;
+  margin-left: -0.25em;
+}
+
+.white:active {
+  box-shadow: 0 0 10px #333 inset;
+}
+
+.black:active {
+  box-shadow: 0 0 5px #333 inset;
+}
+
+.white {
+  width: 3em;
+  height: 10em;
+  background-color: white;
+  border: 0.2em solid black;
+  border-radius: 0 0 0.4em 0.4em;
+  position: relative;
+  left: 0.8em;
+  z-index: 1;
+}
+
+.black {
+  width: 1.5em;
+  height: 6em;
+  background-color: black;
+  border: 0.2em solid black;
+  border-radius: 0 0 0.3em 0.3em;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+}
+
+.noborder {
+  border-right: 0;
+}

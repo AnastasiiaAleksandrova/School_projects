@@ -104,9 +104,9 @@ a {
 }
 
 .content {
-  width: 9.3em;
+  width: 10em;
   background-color: rgb(10, 10, 10);
-  margin: 0.3em 0.3em 0.3em -1.5em;
+  margin: 0.3em 0.3em 0.3em -1.3em;
 }
 
 .content a:focus {

@@ -1,30 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <title>Piano</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
-  <div class="piano">
-    <div class="A key white noborder"></div>
-    <div class="A2 key black"></div>
-    <div class="As key white noborder"></div>
-    <div class="As2 key white noborder"></div>
-    <div class="B key black"></div>
-    <div class="B2 key white noborder"></div>
-    <div class="C key black"></div>
-    <div class="Cs key white noborder"></div>
-    <div class="D key white noborder"></div>
-    <div class="Ds key black"></div>
-    <div class="E key white noborder"></div>
-    <div class="F key black"></div>
-    <div class="Fs key white noborder"></div>
-    <div class="G key black"></div>
-    <div class="Gs key white"></div>
+  <div id="all">
+    <div class="controls">
+      <div class="display" id="display"></div>
+      <div class="icon"><i class="fas fa-power-off" id="button" onclick="onButtonClick()"></i></div>
+    </div>
+
+    <div id="container">
+      <div id="piano">
+        <div id="keyboard">
+          <div class="A key white"></div>
+          <div class="black_placeholder">
+            <div class="As key black"></div>
+          </div>
+          <div class="B key white"></div>
+          <div class="C key white"></div>
+          <div class="black_placeholder">
+            <div class="Cs key black"></div>
+          </div>
+          <div class="D key white"></div>
+          <div class="black_placeholder">
+            <div class="Ds key black"></div>
+          </div>
+          <div class="E key white"></div>
+          <div class="F key white"></div>
+          <div class="black_placeholder">
+            <div class="Fs key black"></div>
+          </div>
+          <div class="G key white"></div>
+          <div class="black_placeholder">
+            <div class="Gs key black"></div>
+          </div>
+          <div class="A2 key white"></div>
+          <div class="black_placeholder">
+            <div class="As2 key black"></div>
+          </div>
+          <div class="B2 key white"></div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
 
   <div id="sounds">
     <audio src="sounds/A.ogg" id="noteA"></audio>
@@ -44,6 +73,7 @@
     <audio src="sounds/Gs.ogg" id="noteGs"></audio>
   </div>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

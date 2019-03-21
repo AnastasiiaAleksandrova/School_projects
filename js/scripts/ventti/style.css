@@ -37,7 +37,9 @@ button:focus {
 
 #buttons {
   display: inline-block;
-  margin-left: 33em;
+  position: absolute;
+  top: 20em;
+  left: 33em;
 }
 
 h2 {
@@ -68,26 +70,26 @@ button:hover {
 #new:focus {}
 
 #user_hand {
-  min-height: 11em;
+  min-height: 6em;
 }
 
 #host_hand {
-  min-height: 11em;
+  min-height: 6em;
 }
 
-#take {}
-
-#take:disabled {}
-
-#take:hover {}
+#take:disabled {
+  color: grey;
+  border-color: grey;
+}
 
 #stop {
   margin-left: 5em;
 }
 
-#stop:hover {}
-
-#stop:disabled {}
+#stop:disabled {
+  color: grey;
+  border-color: grey;
+}
 
 #winner {
   position: absolute;

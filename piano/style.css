@@ -1,47 +1,90 @@
 body {
-  background-color: black;
+  background-image: repeating-linear-gradient(55deg, black 2px, grey 3px);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.display {
+  width: 13em;
+  height: 2em;
   text-align: center;
+  padding-top: 1.2em;
+  box-shadow: inset 0px 0px 5px #333;
 }
 
-.piano {
+.fas {
+  margin: 1em 1em 1em 13em;
+}
+
+#button::before {
+  width: 1em;
+  height: 1em;
+  background-color: grey;
+  padding: 0.5em;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 5px #333;
+  background-image: radial-gradient(white, grey);
+}
+
+.controls {
+  display: flex;
+  width: 40vw;
+  padding: 1em;
+  box-shadow: 0px 0px 8px black;
+}
+
+#container {
+  margin: 0 auto;
+  /* width: 600px; */
   position: relative;
+  top: 2em;
 }
 
-div {
-  display: inline-block;
-  margin-left: -0.25em;
-}
-
-.white:active {
-  box-shadow: 0 0 10px #333 inset;
-}
-
-.black:active {
-  box-shadow: 0 0 5px #333 inset;
+/* #piano {
+  text-align: center;
+} */
+#keyboard {
+  font-size: 0;
 }
 
 .white {
-  width: 3em;
-  height: 10em;
-  background-color: white;
-  border: 0.2em solid black;
-  border-radius: 0 0 0.4em 0.4em;
-  position: relative;
-  left: 0.8em;
+  height: 200px;
+  width: 50px;
+  background: white;
   z-index: 1;
 }
 
-.black {
-  width: 1.5em;
-  height: 6em;
-  background-color: black;
-  border: 0.2em solid black;
-  border-radius: 0 0 0.3em 0.3em;
-  z-index: 2;
-  position: absolute;
-  top: 0;
+.white, .black {
+  display: inline-block;
+  margin: 0;
+  border: 1px solid black;
+  border-left: 0px solid black;
+  position: relative;
+  vertical-align: top;
+  z-index: 1;
+  border-radius: 0 0 5px 5px;
 }
 
-.noborder {
-  border-right: 0;
+.white:first-child {
+  border-left: 1px solid black;
+}
+
+.black {
+  height: 120px;
+  width: 30px;
+  background: black;
+}
+
+.white:active, .black:active {
+  box-shadow: inset 0px 0px 5px #333;
+}
+
+.black_placeholder {
+  width: 0px;
+  position: relative;
+  vertical-align: top;
+  z-index: 2;
+  height: 50px;
+  left: -16px;
+  display: inline-block;
 }

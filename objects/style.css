@@ -1,0 +1,21 @@
+input {
+  display: block;
+  margin: 0.5em;
+}
+
+form {
+  margin: 1em;
+}
+
+button {
+  margin: 0.5em;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}

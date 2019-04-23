@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Objects</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+  <form id="car">
+    <label for="licence_plate">Licence plate</label>
+    <input type="text" id="licence_plate">
+
+    <label for="car_maker">Car maker</label>
+    <input type="text" id="car_maker">
+
+    <label for="car_model">Car model</label>
+    <input type="text" id="car_model">
+
+    <label for="price">Price</label>
+    <input type="number" id="price">
+
+    <label for="color">Color</label>
+    <input type="color" id="color">
+
+    <button type="button" id="add_car" onclick="onAddcarClick()">Submit</button>
+  </form>
+  <hr>
+  <form>
+    <label for="search">Enter licence plate to find a car</label>
+    <input type="text" id="search">
+    <button type="button" id="find" onclick="onSearchClick()">Search</button>
+  </form>
+
+  <p id="result"></p>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>Licence plate</td>
+          <td>Maker</td>
+          <td>Model</td>
+          <td>Price</td>
+          <td>Color</td>
+          <td>Discount</td>
+        </tr>
+      </thead>
+      <tbody id="table">
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
